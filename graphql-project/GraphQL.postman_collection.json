@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "045fad4b-c269-4c45-9e47-ad11634274cc",
+		"name": "GraphQL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40708373"
+	},
+	"item": [
+		{
+			"name": "graphql-example-allBooks",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n    allBooks{\r\n        id\r\n        title\r\n    }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": "http://localhost:8080/graphql"
+			},
+			"response": []
+		},
+		{
+			"name": "graphql-example-getBook",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n    getBook(bookId:13){\r\n        id\r\n        title\r\n    }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": "http://localhost:8080/graphql"
+			},
+			"response": []
+		},
+		{
+			"name": "graphql-example-saveBook",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation{\r\n    createBook(book:{\r\n        title:\"Nikita's book\",\r\n        description:\"It will tell about your personality\",\r\n        price:223,\r\n        pages:123,\r\n        author:\"Nikita\"\r\n}){\r\n    id\r\n}}",
+						"variables": ""
+					}
+				},
+				"url": "http://localhost:8080/graphql"
+			},
+			"response": []
+		}
+	]
+}
